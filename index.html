@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="OpenCalculate — free calculator in your browser." />
+  <meta name="theme-color" content="#000000" />
+  <title>OpenCalculate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <strong>OpenCalculate</strong>
+    <div class="top-right">
+      <button type="button" id="theme-toggle">Theme</button>
+      <button type="button" id="history-toggle">History</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="modes">
+        <button type="button" class="mode active" data-mode="basic">Basic</button>
+        <button type="button" class="mode" data-mode="scientific">Scientific</button>
+        <button type="button" id="angle-toggle">DEG</button>
+      </div>
+
+      <div class="calc">
+        <div class="display" id="display">
+          <div class="display-expression" id="display-expression"></div>
+          <div class="display-value" id="display-value">0</div>
+          <div class="display-error" id="display-error" hidden></div>
+        </div>
+
+        <div class="keypad" id="keypad">
+          <div class="sci" id="sci-keys" hidden>
+            <button type="button" class="key" data-insert="sin(">sin</button>
+            <button type="button" class="key" data-insert="cos(">cos</button>
+            <button type="button" class="key" data-insert="tan(">tan</button>
+            <button type="button" class="key" data-insert="asin(">asin</button>
+            <button type="button" class="key" data-insert="acos(">acos</button>
+            <button type="button" class="key" data-insert="atan(">atan</button>
+            <button type="button" class="key" data-insert="ln(">ln</button>
+            <button type="button" class="key" data-insert="log(">log</button>
+            <button type="button" class="key" data-insert="sqrt(">√</button>
+            <button type="button" class="key" data-action="square">x²</button>
+            <button type="button" class="key" data-insert="^">xʸ</button>
+            <button type="button" class="key" data-action="factorial">n!</button>
+            <button type="button" class="key" data-insert="π">π</button>
+            <button type="button" class="key" data-insert="e">e</button>
+            <button type="button" class="key" data-insert="%">%</button>
+          </div>
+
+          <div class="main-keys">
+            <button type="button" class="key" data-action="clear">AC</button>
+            <button type="button" class="key" data-action="backspace">⌫</button>
+            <button type="button" class="key" data-insert="(">(</button>
+            <button type="button" class="key" data-insert=")">)</button>
+
+            <button type="button" class="key" data-insert="7">7</button>
+            <button type="button" class="key" data-insert="8">8</button>
+            <button type="button" class="key" data-insert="9">9</button>
+            <button type="button" class="key" data-insert="/">÷</button>
+
+            <button type="button" class="key" data-insert="4">4</button>
+            <button type="button" class="key" data-insert="5">5</button>
+            <button type="button" class="key" data-insert="6">6</button>
+            <button type="button" class="key" data-insert="*">×</button>
+
+            <button type="button" class="key" data-insert="1">1</button>
+            <button type="button" class="key" data-insert="2">2</button>
+            <button type="button" class="key" data-insert="3">3</button>
+            <button type="button" class="key" data-insert="-">−</button>
+
+            <button type="button" class="key" data-insert="0">0</button>
+            <button type="button" class="key" data-insert=".">.</button>
+            <button type="button" class="key" data-insert="+">+</button>
+            <button type="button" class="key key-eq" data-action="equals">=</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="hint">Type: 15 * 24 · (25+17)/6 · 18% of 2500 · sqrt(144) · 2^10</p>
+
+      <aside class="history" id="history-panel" hidden>
+        <div class="history-head">
+          <span>History</span>
+          <button type="button" id="history-clear" disabled>Clear</button>
+        </div>
+        <p class="history-note">Saved on this device only.</p>
+        <ul class="history-list" id="history-list"></ul>
+        <p class="history-empty" id="history-empty">No calculations yet.</p>
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
