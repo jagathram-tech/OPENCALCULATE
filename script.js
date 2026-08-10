@@ -1,6 +1,3 @@
-/* OpenCalculate — all in one file */
-
-/* ——— Theme ——— */
 const THEME_KEY = "opencalculate.theme";
 
 function getPreferredTheme() {
@@ -33,7 +30,6 @@ function toggleTheme() {
   return applyTheme(next);
 }
 
-/* ——— History ——— */
 const HISTORY_KEY = "opencalculate.history";
 const MAX_HISTORY = 100;
 
@@ -84,7 +80,6 @@ function clearHistory() {
   saveHistory([]);
 }
 
-/* ——— Safe expression parser (no eval) ——— */
 var TokenType = {
   NUMBER: "NUMBER",
   IDENT: "IDENT",
@@ -429,7 +424,6 @@ function formatNumber(n) {
   return s === "-0" ? "0" : s;
 }
 
-/* ——— Calculator ——— */
 function Calculator(opts) {
   this.onChange = opts.onChange;
   this.onHistory = opts.onHistory || function () {};
@@ -588,7 +582,6 @@ Calculator.prototype.useResult = function (result) {
   this.notify();
 };
 
-/* ——— UI ——— */
 initTheme();
 
 function $(sel, root) {
