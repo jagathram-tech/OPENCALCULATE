@@ -30,7 +30,7 @@ main{padding:1.25rem 1rem 2rem}
 .sci{display:grid;grid-template-columns:repeat(5,1fr);gap:.35rem;margin-bottom:.5rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
 .sci[hidden]{display:none}
 .nums{display:grid;grid-template-columns:repeat(4,1fr);gap:.35rem}
-.btn{min-height:48px;font-size:1rem;padding:.35rem;user-select:none;-webkit-tap-highlight-color:transparent}
+.btn{min-height:48px;font-size:1rem;padding:.35rem;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .sci .btn{min-height:36px;font-size:.75rem}
 .eq{background:var(--eq);color:var(--eqFg);font-weight:bold}
 .eq:hover{background:var(--eq);opacity:.85}

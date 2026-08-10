@@ -142,8 +142,7 @@ this.e=this.e.slice(0,-1);this.err=null;this.pg()}
 Calc.prototype.put=function(t){
 if(this.err){this.err=null;this.e=""}
 if(this.je){var ops="+-*/^%"
-if(t.length==1&&ops.indexOf(t)!=-1)this.e=(this.r||"0")+t
-else if(t=="!"||t=="%")this.e=(this.r||"0")+t
+if((t.length==1&&ops.indexOf(t)!=-1)||t=="!"||t=="%")this.e=(this.r||"0")+t
 else this.e=t
 this.r=null;this.je=false;this.pg();return}
 this.e+=t;this.pg()}
